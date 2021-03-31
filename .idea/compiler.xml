@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="e-commerce-eurekaserver" />
+        <module name="e-commerce-product" />
+        <module name="e-commerce-member" />
+        <module name="e-commerce-commons" />
+        <module name="e-commerce-message" />
+        <module name="e-commerce-pc-web" />
+        <module name="e-commerce-generator" />
+        <module name="e-commerce-api-member" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="e-commerce-api" options="-parameters" />
+      <module name="e-commerce-api-member" options="-parameters" />
+      <module name="e-commerce-commons" options="-parameters" />
+      <module name="e-commerce-eurekaserver" options="-parameters" />
+      <module name="e-commerce-generator" options="-parameters" />
+      <module name="e-commerce-member" options="-parameters" />
+      <module name="e-commerce-message" options="-parameters" />
+      <module name="e-commerce-pc-web" options="-parameters" />
+      <module name="e-commerce-product" options="-parameters" />
+    </option>
+  </component>
+</project>
