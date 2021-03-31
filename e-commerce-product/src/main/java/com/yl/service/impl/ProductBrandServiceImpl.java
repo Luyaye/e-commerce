@@ -69,6 +69,7 @@ public class ProductBrandServiceImpl extends ServiceImpl<ProductBrandMapper, Pro
   @Override
   public ResponseBase delete(Long brandId) {
     return removeById(brandId) ? baseApiService.setResultSuccess("删除chengg！") : baseApiService.setResultError("删除失败！");
+
   }
 
 }
