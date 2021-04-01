@@ -73,7 +73,7 @@ public class ProductCategoryServiceImpl extends ServiceImpl<ProductCategoryMappe
     queryWrapper.eq("level", level);
     queryWrapper.eq("parent_id", 0);
 
-    Page<ProductCategory> page = new Page<>(skip, level);
+    Page<ProductCategory> page = new Page<>(skip, limit);
     return page(page, queryWrapper);
   }
 

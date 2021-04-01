@@ -1,5 +1,8 @@
 package com.yl.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yl.base.BaseApiService;
 import com.yl.base.ResponseBase;
 import com.yl.entity.ProductBrand;
@@ -72,4 +75,22 @@ public class ProductBrandServiceImpl extends ServiceImpl<ProductBrandMapper, Pro
 
   }
 
+  /**
+   * 分页查询商品品牌信息
+   *
+   * @param name
+   * @param firstLetter
+   * @param skip
+   * @param limit
+   * @return
+   */
+  @Override
+  public IPage<ProductBrand> page(String name, String firstLetter, Integer skip, Integer limit) {
+    QueryWrapper<ProductBrand> queryWrapper = new QueryWrapper<>();
+    queryWrapper.like("name", name);
+    queryWrapper.eq("first_letter", firstLetter);
+
+    Page<ProductBrand> page = new Page<>(skip, limit);
+    return page(page, queryWrapper);
+  }
 }

@@ -1,5 +1,6 @@
 package com.yl.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yl.base.ResponseBase;
 import com.yl.entity.ProductBrand;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -37,5 +38,16 @@ public interface IProductBrandService extends IService<ProductBrand> {
    * @return
    */
   ResponseBase delete(Long brandId);
+
+  /**
+   * 分页查询商品品牌信息
+   *
+   * @param name
+   * @param firstLetter
+   * @param skip
+   * @param limit
+   * @return
+   */
+  IPage<ProductBrand> page(String name, String firstLetter, Integer skip, Integer limit);
 
 }
