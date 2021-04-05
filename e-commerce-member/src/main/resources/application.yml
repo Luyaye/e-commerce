@@ -6,7 +6,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 spring:
   application:
-    name: member
+    name: memberServer
   redis:
     host: 127.0.0.1
     password: 123456
@@ -37,15 +37,12 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
-  ##activemq连接信息
-  activemq:
-    broker-url: tcp://localhost:61616
-    in-memory: true
-    pool:
-      enabled: false
-##队列
-messages:
-  queue: message_queue
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: true
+      logic-not-delete-value: false
 
 
 
